@@ -2443,3 +2443,10 @@ input, select, textarea {
 					}
 
 	}
+img.profile-pic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0; /* oppure 50% per cerchio */
+  display: block;
+}
