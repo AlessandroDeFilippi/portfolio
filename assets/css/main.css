@@ -2019,7 +2019,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style4 form input[type=text],
-			.wrapper.style4 form input[type=password],
+			input[type=email], .wrapper.style4 form input[type=password],
 			.wrapper.style4 form select,
 			.wrapper.style4 form textarea {
 				border: none;
@@ -2449,47 +2449,4 @@ img.profile-pic {
   object-fit: cover;
   border-radius: 0; /* oppure 50% per cerchio */
   display: block;
-}
-
-
-/* Migliorie responsive per la sezione #top */
-
-@media screen and (max-width: 768px) {
-  #top .row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  #top .col-4,
-  #top .col-8 {
-    width: 100% !important;
-    max-width: 100%;
-    padding: 0;
-  }
-
-  #top .image.fit {
-    width: 60%;
-    max-width: 200px;
-    margin: 0 auto 1em auto;
-  }
-
-  #top h1 {
-    font-size: 1.8em;
-    margin-top: 1em;
-  }
-
-  #top p {
-    font-size: 1.1em;
-    line-height: 1.5em;
-    margin-bottom: 1em;
-  }
-}
-
-/* Miglioria estetica all'immagine del profilo */
-img.profile-pic {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
 }
