@@ -2447,6 +2447,70 @@ img.profile-pic {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 0; /* oppure 50% per cerchio */
+  border-radius: 0;
   display: block;
+}
+
+/* Project card hover lift */
+.box.style2 {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.box.style2:hover {
+  transform: translateY(-5px);
+  box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), 0px 10px 24px 0px rgba(0,0,0,0.13);
+}
+
+/* Placeholder cover for project cards without an image */
+.box.style2 .project-cover {
+  position: relative;
+  left: 2em;
+  top: 2em;
+  margin: -4em 0 4em -4em;
+  width: calc(100% + 4em);
+  height: 11.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a6fa8 0%, #43B3E0 60%, #5ecde8 100%);
+  color: rgba(255,255,255,0.95);
+  text-decoration: none;
+  transition: opacity 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.box.style2 .project-cover::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 60%;
+  height: 160%;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.box.style2 .project-cover:hover {
+  opacity: 0.88;
+}
+
+.box.style2 .project-cover .cover-icon {
+  font-size: 3em;
+  display: block;
+  margin-bottom: 0.35em;
+  color: rgba(255,255,255,0.95);
+}
+
+.box.style2 .project-cover .cover-tag {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.15);
+  padding: 0.3em 0.8em;
+  border-radius: 3px;
 }
