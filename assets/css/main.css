@@ -2447,11 +2447,15 @@ img.profile-pic {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 0; /* oppure 50% per cerchio */
   display: block;
 }
 
-/* Project card hover lift */
+/* ============================================================
+   PROJECT CARDS — uniform covers + hover lift
+   ============================================================ */
+
+/* Hover lift on all project cards */
 .box.style2 {
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -2461,56 +2465,67 @@ img.profile-pic {
   box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1), 0px 10px 24px 0px rgba(0,0,0,0.13);
 }
 
-/* Placeholder cover for project cards without an image */
+/* Uniform CSS cover (replaces images) */
 .box.style2 .project-cover {
   position: relative;
   left: 2em;
   top: 2em;
-  margin: -4em 0 4em -4em;
+  margin: -4em 0 3.2em -4em;
   width: calc(100% + 4em);
-  height: 11.5em;
+  height: 12em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1a6fa8 0%, #43B3E0 60%, #5ecde8 100%);
+  gap: 0.55em;
+  background: linear-gradient(135deg, #0F1B33 0%, #1B3A66 55%, #0E8C82 100%);
   color: rgba(255,255,255,0.95);
   text-decoration: none;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.22s ease-in-out;
   overflow: hidden;
 }
 
+/* decorative circle */
 .box.style2 .project-cover::before {
   content: '';
   position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 60%;
-  height: 160%;
-  background: rgba(255,255,255,0.06);
+  top: -35%;
+  right: -8%;
+  width: 58%;
+  height: 170%;
+  background: rgba(255,255,255,0.055);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .box.style2 .project-cover:hover {
-  opacity: 0.88;
+  opacity: 0.85;
 }
 
 .box.style2 .project-cover .cover-icon {
-  font-size: 3em;
+  font-size: 2.6em;
   display: block;
-  margin-bottom: 0.35em;
-  color: rgba(255,255,255,0.95);
+  color: rgba(255,255,255,0.92);
+  position: relative;
 }
 
-.box.style2 .project-cover .cover-tag {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.72em;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+.box.style2 .cover-title {
+  font-size: 0.82em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  background: rgba(0,0,0,0.15);
-  padding: 0.3em 0.8em;
-  border-radius: 3px;
+  color: rgba(255,255,255,0.78);
+  position: relative;
+}
+
+.box.style2 .cover-tag {
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.2);
+  padding: 0.28em 0.85em;
+  border-radius: 2px;
+  position: relative;
 }
